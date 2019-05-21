@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutrai/custom-widgets/workout_card.dart';
-import 'programs-pages/phul.dart';
-import 'programs-pages/fat-destroyer.dart';
-
+import 'programs-pages/program-template.dart';
+import 'package:nutrai/custom-widgets/mini_workout_card.dart';
 
 
 class Programs extends StatelessWidget {
@@ -36,23 +35,23 @@ class Programs extends StatelessWidget {
               children: <Widget>[
                 GestureDetector(
                   onTap: () =>
-                      onCardTap(context, PhulPlan('assets/deadlift.jpg')),
+                      onCardTap(context, ProgramTemplate('phul', 'assets/deadlift.jpg', 'phulImgHero', 'P.H.U.L')),
                   child: WorkoutCard(
                     textProp:
                         'Power Hypertrophy Upper Lower (P.H.U.L.) Workout',
                     imageRef: 'assets/deadlift.jpg',
                     heroTag: 'phulImgHero',
-                    titleProp: 'Muscle',
+                    titleProp: 'Strength',
                   ),
                 ),
                 GestureDetector(
                   onTap: () => onCardTap(
-                      context, FatDestroyerPlan('assets/girl-dumbell.jpg')),
+                      context, ProgramTemplate('fatDestroyer', 'assets/outdoor-barbell.jpg', 'fatDestImgHero', 'Fat Destroyer')),
                   child: WorkoutCard(
                       textProp:
                           '12 Week Fat Destroyer: Complete Fat Loss Workout',
-                      imageRef: 'assets/girl-dumbell.jpg',
-                      heroTag: 'fatdestroyerImgHero',
+                      imageRef: 'assets/outdoor-barbell.jpg',
+                      heroTag: 'fatDestImgHero',
                       titleProp: 'Fat Burn'),
                 ),
                 WorkoutCard(
@@ -60,6 +59,42 @@ class Programs extends StatelessWidget {
                   imageRef: 'assets/barbell-wide.jpg',
                   heroTag: 'tenWeekMassImgHero',
                   titleProp: 'Mass',
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0, top: 16),
+            child: Row(
+              children: <Widget>[
+                Text(
+                  'At Home',
+                  style: TextStyle(fontSize: 18),
+                )
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                MiniWorkoutCard(
+                  textProp:
+                  'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
+                  imageRef: 'assets/girl-yoga-stretch.jpg',
+                  heroTag: 'flatterStomachImgHero',
+                  titleProp: 'Fat Burn',
+                ),
+                MiniWorkoutCard(
+                    textProp: "12 Week Women's Bikini Prep Workout Program",
+                    imageRef: 'assets/strech.jpg',
+                    heroTag: 'bikiniPrepImgHero',
+                    titleProp: 'Fat Burn'),
+                MiniWorkoutCard(
+                  textProp: 'The Metabolic Circuit',
+                  imageRef: 'assets/blond-healthy-drinking.jpg',
+                  heroTag: 'metabolicCircImgHero',
+                  titleProp: 'Fat Burn',
                 ),
               ],
             ),
@@ -83,18 +118,54 @@ class Programs extends StatelessWidget {
                   textProp:
                       'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
                   imageRef: 'assets/girl-beach-smile.jpg',
-                  heroTag: 'flatterStomachImgHero',
+                  heroTag: 'test1',
                   titleProp: 'Fat Burn',
                 ),
                 WorkoutCard(
                     textProp: "12 Week Women's Bikini Prep Workout Program",
                     imageRef: 'assets/beach-blond.jpg',
-                    heroTag: 'bikiniPrepImgHero',
+                    heroTag: 'test2',
                     titleProp: 'Fat Burn'),
                 WorkoutCard(
                   textProp: 'The Metabolic Circuit',
                   imageRef: 'assets/blond-healthy-drinking.jpg',
-                  heroTag: 'metabolicCircImgHero',
+                  heroTag: 'test4',
+                  titleProp: 'Fat Burn',
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0, top: 16),
+            child: Row(
+              children: <Widget>[
+                Text(
+                  'Fat Loss',
+                  style: TextStyle(fontSize: 18),
+                )
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                MiniWorkoutCard(
+                  textProp:
+                  'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
+                  imageRef: 'assets/tie-shoe.jpg',
+                  heroTag: 'test5',
+                  titleProp: 'Fat Burn',
+                ),
+                MiniWorkoutCard(
+                    textProp: "12 Week Women's Bikini Prep Workout Program",
+                    imageRef: 'assets/girl-dumbell.jpg',
+                    heroTag: 'test6',
+                    titleProp: 'Fat Burn'),
+                MiniWorkoutCard(
+                  textProp: 'The Metabolic Circuit',
+                  imageRef: 'assets/blond-healthy-drinking.jpg',
+                  heroTag: 'test7',
                   titleProp: 'Fat Burn',
                 ),
               ],

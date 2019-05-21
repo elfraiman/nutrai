@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'programs.dart';
 import 'workout.dart';
+import 'nutrition.dart';
 
 class BottomNav extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _BottomNavState extends State<BottomNav> {
   String _currentTabTitle = 'Programs';
 
   // Holds the pages for the bottom nav
-  final List<Widget> _children = [Programs(), Workout(), Workout()];
+  final List<Widget> _children = [Programs(), Workout(), Nutrition(), Workout()];
 
   void onTabTapped(int index) {
     setState(() {
@@ -28,6 +29,8 @@ class _BottomNavState extends State<BottomNav> {
         _currentTabTitle = 'Workout';
       });
     } else if (index == 2) {
+      _currentTabTitle = 'Nutrition';
+    } else if (index == 3 ) {
       _currentTabTitle = 'Shop';
     }
   }
@@ -50,11 +53,37 @@ class _BottomNavState extends State<BottomNav> {
             ),
             Divider(),
             ListTile(
-              leading: Icon(Icons.change_history),
-              title: Text('Pop'),
+              leading: Icon(Icons.dashboard),
+              title: Text('Programs'),
+              onTap: () {
+                onTabTapped(0);
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.fitness_center),
+              title: Text('Workout'),
+              onTap: () {
+                onTabTapped(1);
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.restaurant),
+              title: Text('Nutrition'),
               onTap: () {
                 // change app state...
+                onTabTapped(2);
                 Navigator.pop(context); // close the drawer
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.store),
+              title: Text('Store'),
+              onTap: () {
+                // change app state...
+                onTabTapped(0);
+                Navigator.pop(context);
               },
             )
           ],
@@ -84,6 +113,9 @@ class _BottomNavState extends State<BottomNav> {
             BottomNavigationBarItem(
                 title: Text('Workout', style: TextStyle(fontSize: 12)),
                 icon: Icon(Icons.fitness_center)),
+            BottomNavigationBarItem(
+                title: Text('Nutrition', style: TextStyle(fontSize: 12)),
+                icon: Icon(Icons.restaurant)),
             BottomNavigationBarItem(
               title: Text(
                 'Shop',

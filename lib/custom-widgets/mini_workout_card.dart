@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class WorkoutCard extends StatelessWidget {
+class MiniWorkoutCard extends StatelessWidget {
   var textProp = 'default';
   var imageRef = '';
   var heroTag = '';
   var titleProp = '';
 
-  WorkoutCard(
+  MiniWorkoutCard(
       {@required this.textProp,
-      @required this.imageRef,
-      @required this.heroTag,
-      @required this.titleProp});
+        @required this.imageRef,
+        @required this.heroTag,
+        @required this.titleProp});
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(
-        minWidth: 300,
-        maxWidth: 300,
-        minHeight: 250,
-        maxHeight: 300
+          minWidth: 200,
+          maxWidth: 200,
+          minHeight: 230,
+          maxHeight: 230
       ),
       child: Card(
         elevation: 8,
@@ -43,7 +43,7 @@ class WorkoutCard extends StatelessWidget {
             ),
             Padding(
               padding:
-                  const EdgeInsets.only(top: 6, left: 16, right: 16),
+              const EdgeInsets.only(top: 6, left: 16, right: 16),
               child: Text(textProp, style: TextStyle(fontSize: 12)),
             ),
           ],
