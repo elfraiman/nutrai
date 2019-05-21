@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "435872768074",
+    "firebase_url": "https://nutrai.firebaseio.com",
+    "project_id": "nutrai",
+    "storage_bucket": "nutrai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435872768074:android:b08a87fcf0987d31",
+        "android_client_info": {
+          "package_name": "net.codegrid.nutrai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435872768074-j8aaug8bnes591krfkn9e721uuolot1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnkMDnj4odORqbzB2jY1zp-ytUw-VS5Ps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435872768074-j8aaug8bnes591krfkn9e721uuolot1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
