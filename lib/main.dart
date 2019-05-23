@@ -27,7 +27,9 @@ class MyApp extends StatelessWidget {
                 brightness: Brightness.light,
                 elevation: 0,
                 color: Colors.white,
-                textTheme: TextTheme(title: TextStyle(color: Colors.black87, fontSize: 18, letterSpacing: 4)),
+                textTheme: TextTheme(
+                    title: TextStyle(
+                        color: Colors.black87, fontSize: 18, letterSpacing: 4)),
                 actionsIconTheme: IconThemeData(color: Colors.black87),
                 iconTheme: IconThemeData(color: Colors.black87)),
             primarySwatch: Colors.deepPurple,
@@ -76,13 +78,13 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title != null ? widget.title : 'Be the one'),
+        title: Text(widget.title != null ? widget.title : 'Nutrai Fitness'),
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: <Widget>[
-              Image.asset('assets/squat.jpg'),
+              Image.asset('assets/tie-shoe.jpg'),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Form(
@@ -159,7 +161,7 @@ class _FirebaseAuth extends StatelessWidget {
   Widget homepage;
   Widget loginpage;
 
-  _FirebaseAuth(@required this.homepage, @required this.loginpage);
+  _FirebaseAuth(this.homepage, this.loginpage);
 
   @override
   Widget build(BuildContext context) {
@@ -169,7 +171,7 @@ class _FirebaseAuth extends StatelessWidget {
       stream: authStream,
       builder: (context, snapshot) {
         debugPrint('build ${snapshot.connectionState}');
-        if (snapshot.connectionState != ConnectionState.active) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(
             body: Center(
               child: CircularProgressIndicator(),

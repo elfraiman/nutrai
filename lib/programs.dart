@@ -5,6 +5,7 @@ import 'package:nutrai/custom-widgets/mini_workout_card.dart';
 
 
 class Programs extends StatelessWidget {
+
   onCardTap(BuildContext context, Widget page) {
     Navigator.push(
       context,
@@ -54,11 +55,14 @@ class Programs extends StatelessWidget {
                       heroTag: 'fatDestImgHero',
                       titleProp: 'Fat Burn'),
                 ),
-                WorkoutCard(
-                  textProp: '10 Week Mass Building Program',
-                  imageRef: 'assets/barbell-wide.jpg',
-                  heroTag: 'tenWeekMassImgHero',
-                  titleProp: 'Mass',
+                GestureDetector(
+                  onTap: () => onCardTap(context, ProgramTemplate('tenWeekMass', 'assets/barbell-wide.jpg', 'tenWeekMassImgHero', '10 Week Mass')),
+                  child: WorkoutCard(
+                    textProp: '10 Week Mass Building Program',
+                    imageRef: 'assets/barbell-wide.jpg',
+                    heroTag: 'tenWeekMassImgHero',
+                    titleProp: 'Mass',
+                  ),
                 ),
               ],
             ),

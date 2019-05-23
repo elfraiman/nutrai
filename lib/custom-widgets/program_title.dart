@@ -15,14 +15,20 @@ class ProgramTitleContainer extends StatelessWidget {
       child: Container(
           child: Column(
         children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text(
+                programGoal,
+                style: TextStyle(color: accentColor, fontSize: 13),
+              )
+            ],
+          ),
           Padding(
-            padding: const EdgeInsets.only(top: 16.0),
+            padding: const EdgeInsets.only(top: 10.0),
             child: Row(
               children: <Widget>[
-                Text(
-                  programGoal,
-                  style: TextStyle(color: accentColor, fontSize: 12),
-                )
+                Text(programTitle,
+                    style: TextStyle(fontSize: 24)),
               ],
             ),
           ),
@@ -30,22 +36,13 @@ class ProgramTitleContainer extends StatelessWidget {
             padding: const EdgeInsets.only(top: 10.0),
             child: Row(
               children: <Widget>[
-                Text(programTitle,
-                    style: TextStyle(fontSize: 21)),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10.0, bottom: 18.0),
-            child: Row(
-              children: <Widget>[
                 Text(
                   'Published by ',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
                 Text(
                   publisher,
-                  style: TextStyle(fontSize: 13, color: Colors.grey[400]),
+                  style: TextStyle(fontSize: 14, color: Colors.grey[400]),
                 )
               ],
             ),

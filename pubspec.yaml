@@ -29,6 +29,7 @@ dependencies:
   http: ^0.12.0+2
   transparent_image: ^1.0.0
   flutter_html: ^0.10.1
+  youtube_player_flutter: ^1.1.1+1
 
 dev_dependencies:
 
@@ -55,23 +56,7 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
   assets:
-    - assets/pic.jpeg
-    - assets/trump.jpeg
-    - assets/bowl.jpg
-    - assets/deadlift.jpg
-    - assets/strech.jpg
-    - assets/squat.jpg
-    - assets/girl-dumbell.jpg
-    - assets/barbell-wide.jpg
-    - assets/floor-girl-pink.jpg
-    - assets/woman-squat.jpg
-    - assets/blond-healthy-drinking.jpg
-    - assets/girl-yogamat.jpg
-    - assets/girl-yoga-stretch.jpg
-    - assets/girl-beach-smile.jpg
-    - assets/beach-blond.jpg
-    - assets/outdoor-barbell.jpg
-    - assets/tie-shoe.jpg
+    - assets/
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.io/assets-and-images/#from-packages

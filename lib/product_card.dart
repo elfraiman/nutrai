@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   final productDetail;
 
-  ProductCard(@required this.productDetail);
+  ProductCard(this.productDetail);
 
   @override
   Widget build(BuildContext context) {

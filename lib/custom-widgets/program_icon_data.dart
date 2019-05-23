@@ -11,54 +11,51 @@ class ProgramIconBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 16.0),
-      child: Row(
-        mainAxisAlignment:
-        MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Icon(Icons.fitness_center),
-              ),
-              Text(goal,
-                  style: TextStyle(fontSize: 13))
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Icon(Icons.sentiment_satisfied),
-              ),
-              Text(difficulty,
-                  style: TextStyle(fontSize: 13))
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Icon(Icons.watch_later),
-              ),
-              Text(period,
-                  style: TextStyle(fontSize: 13))
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Icon(Icons.watch),
-              ),
-              Text(exerciseTime,
-                  style: TextStyle(fontSize: 13))
-            ],
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment:
+      MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Icon(Icons.fitness_center, color: Colors.black54,),
+            ),
+            Text(goal,
+                style: TextStyle(fontSize: 13))
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Icon(Icons.sentiment_satisfied, color: Colors.black54),
+            ),
+            Text(difficulty,
+                style: TextStyle(fontSize: 13))
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Icon(Icons.watch_later, color: Colors.black54),
+            ),
+            Text(period,
+                style: TextStyle(fontSize: 13))
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Icon(Icons.watch, color: Colors.black54),
+            ),
+            Text(exerciseTime,
+                style: TextStyle(fontSize: 13))
+          ],
+        ),
+      ],
     );
   }
 }

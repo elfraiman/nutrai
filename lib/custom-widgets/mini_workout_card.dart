@@ -14,13 +14,9 @@ class MiniWorkoutCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-          minWidth: 200,
-          maxWidth: 200,
-          minHeight: 230,
-          maxHeight: 230
-      ),
+    return SizedBox(
+      height: 240,
+      width: 200,
       child: Card(
         elevation: 8,
         semanticContainer: true,
@@ -33,7 +29,7 @@ class MiniWorkoutCard extends StatelessWidget {
           children: <Widget>[
             Hero(
                 tag: heroTag,
-                child: Image.asset(imageRef)),
+                child: Image.asset(imageRef, fit: BoxFit.cover, height: 120)),
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 16),
               child: Text(
