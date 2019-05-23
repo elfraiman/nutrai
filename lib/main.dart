@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.deepPurpleAccent[400],
       systemNavigationBarDividerColor: Colors.black,
-      statusBarColor: Color.fromARGB(239, 239, 239, 239),
+      statusBarColor: Colors.white
     ));
 
     return MaterialApp(
@@ -35,7 +35,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.deepPurple,
             brightness: Brightness.light,
             primaryColor: Colors.deepPurpleAccent[400],
-            accentColor: Colors.tealAccent[400]),
+            accentColor: Colors.tealAccent[400],
+            buttonColor: Colors.blue[400]),
         home: _FirebaseAuth(
           BottomNav(),
           LoginPage(),

@@ -22,7 +22,7 @@ class WorkoutCard extends StatelessWidget {
       width: 300,
       height: 320,
       child: Card(
-        elevation: 8,
+        elevation: 12,
         semanticContainer: true,
         margin: EdgeInsets.all(16.0),
         shape: RoundedRectangleBorder(

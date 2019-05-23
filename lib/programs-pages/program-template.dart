@@ -28,7 +28,7 @@ class ProgramTemplate extends StatelessWidget {
               children: <Widget>[
                 StreamBuilder<DocumentSnapshot>(
                     stream: Firestore.instance
-                        .collection('test')
+                        .collection('programs')
                         .document(programDocumentName)
                         .snapshots(),
                     builder: (BuildContext context,
@@ -37,7 +37,13 @@ class ProgramTemplate extends StatelessWidget {
                         return new Text('Error: ${snapshot.error}');
                       } else if (snapshot.connectionState ==
                           ConnectionState.waiting) {
-                        return new Text('Loading...');
+                        return Column(
+                          children: <Widget>[
+                            Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                          ],
+                        );
                       } else {
                         // Act on DATA!
                         var doc = snapshot.data;
@@ -47,21 +53,24 @@ class ProgramTemplate extends StatelessWidget {
                         return Column(
                           children: <Widget>[
                             Stack(children: <Widget>[
+                              // Picture
                               Hero(
                                 tag: heroTag,
                                 child: FadeInImage(
                                     placeholder: AssetImage('pic.jpeg'),
                                     image: AssetImage(image),
-                                    fit: BoxFit.fitWidth),
+                                    fit: BoxFit.cover,
+                                height: 310),
                               ),
                               // Back button
                               Padding(
-                                padding: const EdgeInsets.only(top: 28.0, right: 318),
+                                padding: const EdgeInsets.only(
+                                    top: 28.0, right: 318),
                                 child: FlatButton.icon(
                                     onPressed: () {
                                       Navigator.pop(context);
                                     },
-                                    icon: Icon(Icons.arrow_back,
+                                    icon: Icon(Icons.arrow_back_ios,
                                         color:
                                             Color.fromRGBO(255, 255, 255, 0.85),
                                         size: 30.0),
@@ -69,13 +78,15 @@ class ProgramTemplate extends StatelessWidget {
                               ),
                               // Days per week text
                               Padding(
-                                padding: const EdgeInsets.only(top: 190.0, left: 8),
+                                padding:
+                                    const EdgeInsets.only(top: 225.0, left: 8),
                                 child: FlatButton.icon(
                                     onPressed: () {},
                                     icon: Icon(
                                       Icons.timelapse,
                                       size: 18,
-                                      color: Color.fromRGBO(255, 255, 255, 0.75),
+                                      color:
+                                          Color.fromRGBO(255, 255, 255, 0.75),
                                     ),
                                     // Days per week text
                                     label: Text(
@@ -88,7 +99,7 @@ class ProgramTemplate extends StatelessWidget {
                               ),
                               // Card + Padding
                               Padding(
-                                padding: const EdgeInsets.only(top: 235.0),
+                                padding: const EdgeInsets.only(top: 270.0),
                                 child: Card(
                                   margin: EdgeInsets.all(0),
                                   elevation: 0,
@@ -152,7 +163,22 @@ class ProgramTemplate extends StatelessWidget {
                                           child: Html(
                                             data: "${doc['textContent']}",
                                           ),
-                                        )
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+                                          child: SizedBox(
+                                            width: 500,
+                                            child: FloatingActionButton(
+                                              shape: ContinuousRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16))),
+                                              child: Text('Start Workout', style: TextStyle(color: Colors.white),),
+                                              backgroundColor: Theme.of(context).buttonColor,
+                                              onPressed: () {
+                                                print('Start workout clicked');
+                                              },
+                                            ),
+                                          ),
+                                        ),
+
                                       ],
                                     ),
                                   ),
@@ -163,6 +189,7 @@ class ProgramTemplate extends StatelessWidget {
                         );
                       }
                     }),
+
               ],
             ),
           ),

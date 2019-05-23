@@ -29,6 +29,10 @@ class _BottomNavState extends State<BottomNav> {
         _currentTabTitle = 'Workout';
       });
     } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Nutrition()),
+      );
       _currentTabTitle = 'Nutrition';
     } else if (index == 3 ) {
       _currentTabTitle = 'Shop';
@@ -89,7 +93,7 @@ class _BottomNavState extends State<BottomNav> {
           ],
         ),
       ),
-      appBar: AppBar(
+      appBar: _currentIndex == 2 ? null : AppBar(
         title: Text(_currentTabTitle),
       ),
       body: _children[_currentIndex],
