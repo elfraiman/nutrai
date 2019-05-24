@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom-widgets/recepie_card.dart';
 
 class Nutrition extends StatefulWidget {
   @override
@@ -27,54 +28,34 @@ class _Nutrition extends State<Nutrition> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 32.0),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('Title')
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text('Healthy', style: TextStyle(fontSize: 12, color: Colors.white70)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text('Recepies', style: TextStyle(fontSize: 20, color: Colors.white)),
+                    )
                   ],
                 ),
               ),
+              // Row for cards
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50.0),
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxWidth: 340
-                    ),
-                    child: Card(
-                      semanticContainer: true,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      child: Column(
+                  padding: const EdgeInsets.only(top: 55.0),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 28.0),
+                      child: Row(
                         children: <Widget>[
-                          Stack(children: <Widget>[
-                            FadeInImage(
-                                placeholder: AssetImage('assets/pic.jpg'),
-                                image: AssetImage('assets/bowl.jpg')),
-                            Center(
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 119.0, bottom: 16, right: 16, left: 16),
-                                child: Card(
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Container(
-                                      width: 300,
-                                      padding: EdgeInsets.all(16),
-                                      child: Column(
-                                        children: <Widget>[
-                                          Text(
-                                            'Title for dish',
-                                            style: TextStyle(fontSize: 12),
-                                          ),
-                                          Text('Sub title'),
-                                          Text('Rating / Time to make / price')
-                                        ],
-                                      )),
-                                ),
-                              ),
-                            )
-                          ]),
+                          RecepieCard(),
+                          RecepieCard(),
+                          RecepieCard(),
+                          RecepieCard()
                         ],
                       ),
                     ),

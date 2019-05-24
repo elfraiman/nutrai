@@ -29,10 +29,10 @@ class _BottomNavState extends State<BottomNav> {
         _currentTabTitle = 'Workout';
       });
     } else if (index == 2) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Nutrition()),
-      );
+      // Navigator.push(
+        // context,
+        // MaterialPageRoute(builder: (context) => Nutrition()),
+      //);
       _currentTabTitle = 'Nutrition';
     } else if (index == 3 ) {
       _currentTabTitle = 'Shop';
