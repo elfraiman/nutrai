@@ -19,10 +19,10 @@ class WorkoutCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
-      height: 320,
+      width: 310,
+      height: 300,
       child: Card(
-        elevation: 12,
+        elevation: 8,
         semanticContainer: true,
         margin: EdgeInsets.all(16.0),
         shape: RoundedRectangleBorder(

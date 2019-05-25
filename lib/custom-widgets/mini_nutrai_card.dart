@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class MiniWorkoutCard extends StatelessWidget {
+class MiniNutraiCard extends StatelessWidget {
   var textProp = 'default';
   var imageRef = '';
   var heroTag = '';
   var titleProp = '';
 
-  MiniWorkoutCard(
+  MiniNutraiCard(
       {@required this.textProp,
         @required this.imageRef,
         @required this.heroTag,

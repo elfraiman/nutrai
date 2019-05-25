@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutrai/custom-widgets/workout_card.dart';
 import 'programs-pages/program-template.dart';
-import 'package:nutrai/custom-widgets/mini_workout_card.dart';
+import 'package:nutrai/custom-widgets/mini_nutrai_card.dart';
 
 
 class Programs extends StatelessWidget {
@@ -19,7 +19,7 @@ class Programs extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(left: 16.0, top: 16),
+            padding: const EdgeInsets.only(left: 16.0, top: 42),
             child: Row(
               children: <Widget>[
                 Text(
@@ -86,19 +86,19 @@ class Programs extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: <Widget>[
-                  MiniWorkoutCard(
+                  MiniNutraiCard(
                     textProp:
                     'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
                     imageRef: 'assets/girl-yoga-stretch.jpg',
                     heroTag: 'flatterStomachImgHero',
                     titleProp: 'Fat Burn',
                   ),
-                  MiniWorkoutCard(
+                  MiniNutraiCard(
                       textProp: "12 Week Women's Bikini Prep Workout Program",
                       imageRef: 'assets/strech.jpg',
                       heroTag: 'bikiniPrepImgHero',
                       titleProp: 'Fat Burn'),
-                  MiniWorkoutCard(
+                  MiniNutraiCard(
                     textProp: 'The Metabolic Circuit',
                     imageRef: 'assets/blond-healthy-drinking.jpg',
                     heroTag: 'metabolicCircImgHero',
@@ -162,19 +162,19 @@ class Programs extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: <Widget>[
-                MiniWorkoutCard(
+                MiniNutraiCard(
                   textProp:
                   'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
                   imageRef: 'assets/tie-shoe.jpg',
                   heroTag: 'test5',
                   titleProp: 'Fat Burn',
                 ),
-                MiniWorkoutCard(
+                MiniNutraiCard(
                     textProp: "12 Week Women's Bikini Prep Workout Program",
                     imageRef: 'assets/girl-dumbell.jpg',
                     heroTag: 'test6',
                     titleProp: 'Fat Burn'),
-                MiniWorkoutCard(
+                MiniNutraiCard(
                   textProp: 'The Metabolic Circuit',
                   imageRef: 'assets/blond-healthy-drinking.jpg',
                   heroTag: 'test7',

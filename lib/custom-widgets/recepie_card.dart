@@ -4,11 +4,10 @@ class RecepieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 10.0),
-      child: ConstrainedBox(
-        constraints: BoxConstraints(
-            maxWidth: 340
-        ),
+      padding: const EdgeInsets.only(right: 16.0),
+      child: SizedBox(
+        width: 310,
+        height: 300,
         child: Card(
           semanticContainer: true,
           shape: RoundedRectangleBorder(
@@ -16,35 +15,29 @@ class RecepieCard extends StatelessWidget {
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: Column(
             children: <Widget>[
-              Stack(children: <Widget>[
-                FadeInImage(
-                    placeholder: AssetImage('assets/pic.jpg'),
-                    image: AssetImage('assets/bowl.jpg')),
-                // The inner card
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 119.0, bottom: 16, right: 16, left: 16),
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      child: Container(
-                          width: 300,
-                          padding: EdgeInsets.all(16),
-                          child: Column(
-                            children: <Widget>[
-                              Text(
-                                'Title for dish',
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              Text('Sub title'),
-                              Text('Rating / Time to make / price')
-                            ],
-                          )),
+              FadeInImage(
+                  placeholder: AssetImage('assets/pic.jpg'),
+                  image: AssetImage('assets/bowl.jpg')),
+              // Bottom Text
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+                child: Row(
+                  children: <Widget>[
+                    Text('Sub title', style: TextStyle(fontSize: 10))
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6.0, left: 16.0, right: 16.0),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Title for dish',
+                      style: TextStyle(fontSize: 16),
                     ),
-                  ),
-                )
-              ]),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

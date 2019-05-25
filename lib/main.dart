@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Be the one',
         theme: ThemeData(
-            cardTheme: CardTheme(elevation: 5.0),
+            cardTheme: CardTheme(elevation: 8.0),
             appBarTheme: AppBarTheme(
                 brightness: Brightness.light,
                 elevation: 0,
