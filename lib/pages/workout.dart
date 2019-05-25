@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'custom-widgets/mini_nutrai_card.dart';
+import '../custom-widgets/mini_nutrai_card.dart';
 
 class Workout extends StatefulWidget {
   @override
@@ -17,15 +17,10 @@ class _WorkoutState extends State<Workout> {
               Container(
                 height: 280,
                 decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage('assets/gym-workout-stock.png'), alignment: AlignmentDirectional(1.0, 1.0)),
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadiusDirectional.vertical(
-                        bottom: Radius.circular(10))),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 107.0, left: 2),
-                child: FadeInImage(
-                    placeholder: AssetImage('assets/pic.jpg'),
-                    image: AssetImage('assets/gym-workout-stock.png')),
+                        bottom: Radius.circular(16))),
               ),
               Center(
                   child: Padding(
@@ -41,7 +36,7 @@ class _WorkoutState extends State<Workout> {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[

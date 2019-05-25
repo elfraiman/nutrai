@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nutrai/custom-widgets/workout_card.dart';
-import 'programs-pages/program-template.dart';
+import '../programs-pages/program-template.dart';
 import 'package:nutrai/custom-widgets/mini_nutrai_card.dart';
 
 

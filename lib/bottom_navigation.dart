@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'programs.dart';
-import 'workout.dart';
-import 'nutrition.dart';
+import 'package:nutrai/pages/programs.dart';
+import 'package:nutrai/pages/workout.dart';
+import 'package:nutrai/pages/nutrition.dart';
 
 class BottomNav extends StatefulWidget {
   @override

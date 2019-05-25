@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'custom-widgets/recepie_card.dart';
-import 'custom-widgets/mini_nutrai_card.dart';
+import '../custom-widgets/recepie_card.dart';
+import '../custom-widgets/mini_nutrai_card.dart';
 
 class Nutrition extends StatefulWidget {
   @override
