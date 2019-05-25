@@ -126,11 +126,11 @@ class ProgramTemplate extends StatelessWidget {
                                               programTitle: doc['title'],
                                               publisher: doc['publisher'],
                                             ),
+                                            // Start button
                                             SizedBox(
-                                              width: 115,
-                                              child: RaisedButton(
+                                              width: 100,
+                                              child: FlatButton(
                                                 color: Theme.of(context).primaryColor,
-                                                elevation: 8,
                                                 child: Text('Start', style: TextStyle(color: Colors.white),),
                                                 onPressed: () {
                                                   print('Start workout clicked');
