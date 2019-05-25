@@ -6,10 +6,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../custom-widgets/program_icon_data.dart';
 
 class ProgramTemplate extends StatelessWidget {
-  String image;
-  String heroTag;
-  String titleBar;
-  String programDocumentName;
+  final String image;
+  final String heroTag;
+  final String titleBar;
+  final String programDocumentName;
+
   String youtubeID;
 
   ProgramTemplate(
@@ -37,12 +38,14 @@ class ProgramTemplate extends StatelessWidget {
                         return new Text('Error: ${snapshot.error}');
                       } else if (snapshot.connectionState ==
                           ConnectionState.waiting) {
-                        return Column(
-                          children: <Widget>[
-                            Center(
-                              child: CircularProgressIndicator(),
-                            ),
-                          ],
+                        return Center(
+                          child: Column(
+                            children: <Widget>[
+                              Center(
+                                child: CircularProgressIndicator(),
+                              ),
+                            ],
+                          ),
                         );
                       } else {
                         // Act on DATA!
@@ -57,7 +60,7 @@ class ProgramTemplate extends StatelessWidget {
                               Hero(
                                 tag: heroTag,
                                 child: FadeInImage(
-                                    placeholder: AssetImage('pic.jpeg'),
+                                    placeholder: AssetImage('placeholder.png'),
                                     image: AssetImage(image),
                                     fit: BoxFit.cover,
                                 height: 310),

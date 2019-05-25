@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProgramTitleContainer extends StatelessWidget {
-  var programGoal = '';
-  var programTitle = '';
-  var publisher = '';
+  final programGoal;
+  final programTitle;
+  final publisher;
 
   ProgramTitleContainer({@required this.programGoal, @required this.programTitle, @required this.publisher});
 

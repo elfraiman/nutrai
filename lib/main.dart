@@ -159,8 +159,8 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 class _FirebaseAuth extends StatelessWidget {
-  Widget homepage;
-  Widget loginpage;
+  final Widget homepage;
+  final Widget loginpage;
 
   _FirebaseAuth(this.homepage, this.loginpage);
 

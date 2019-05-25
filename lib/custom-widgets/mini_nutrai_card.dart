@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MiniNutraiCard extends StatelessWidget {
-  var textProp = 'default';
-  var imageRef = '';
-  var heroTag = '';
-  var titleProp = '';
+  final textProp;
+  final imageRef;
+  final heroTag;
+  final titleProp;
 
   MiniNutraiCard(
       {@required this.textProp,
@@ -29,7 +29,7 @@ class MiniNutraiCard extends StatelessWidget {
           children: <Widget>[
             Hero(
                 tag: heroTag,
-                child: Image.asset(imageRef, fit: BoxFit.cover, height: 120)),
+                child: FadeInImage(placeholder: AssetImage('assets/placeholder.png'), image: AssetImage(imageRef), height: 120, fit: BoxFit.cover,)),
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 16),
               child: Text(

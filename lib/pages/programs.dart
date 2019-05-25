@@ -3,9 +3,7 @@ import 'package:nutrai/custom-widgets/workout_card.dart';
 import '../programs-pages/program-template.dart';
 import 'package:nutrai/custom-widgets/mini_nutrai_card.dart';
 
-
 class Programs extends StatelessWidget {
-
   onCardTap(BuildContext context, Widget page) {
     Navigator.push(
       context,
@@ -36,8 +34,10 @@ class Programs extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () =>
-                        onCardTap(context, ProgramTemplate('phul', 'assets/deadlift.jpg', 'phulImgHero', 'P.H.U.L')),
+                    onTap: () => onCardTap(
+                        context,
+                        ProgramTemplate('phul', 'assets/deadlift.jpg',
+                            'phulImgHero', 'P.H.U.L')),
                     child: WorkoutCard(
                       textProp:
                           'Power Hypertrophy Upper Lower (P.H.U.L.) Workout',
@@ -48,7 +48,12 @@ class Programs extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () => onCardTap(
-                        context, ProgramTemplate('fatDestroyer', 'assets/outdoor-barbell.jpg', 'fatDestImgHero', 'Fat Destroyer')),
+                        context,
+                        ProgramTemplate(
+                            'fatDestroyer',
+                            'assets/outdoor-barbell.jpg',
+                            'fatDestImgHero',
+                            'Fat Destroyer')),
                     child: WorkoutCard(
                         textProp:
                             '12 Week Fat Destroyer: Complete Fat Loss Workout',
@@ -57,7 +62,13 @@ class Programs extends StatelessWidget {
                         titleProp: 'Fat Burn'),
                   ),
                   GestureDetector(
-                    onTap: () => onCardTap(context, ProgramTemplate('tenWeekMass', 'assets/barbell-wide.jpg', 'tenWeekMassImgHero', '10 Week Mass')),
+                    onTap: () => onCardTap(
+                        context,
+                        ProgramTemplate(
+                            'tenWeekMass',
+                            'assets/barbell-wide.jpg',
+                            'tenWeekMassImgHero',
+                            '10 Week Mass')),
                     child: WorkoutCard(
                       textProp: '10 Week Mass Building Program',
                       imageRef: 'assets/barbell-wide.jpg',
@@ -88,7 +99,7 @@ class Programs extends StatelessWidget {
                 children: <Widget>[
                   MiniNutraiCard(
                     textProp:
-                    'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
+                        'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
                     imageRef: 'assets/girl-yoga-stretch.jpg',
                     heroTag: 'flatterStomachImgHero',
                     titleProp: 'Fat Burn',
@@ -164,7 +175,7 @@ class Programs extends StatelessWidget {
               children: <Widget>[
                 MiniNutraiCard(
                   textProp:
-                  'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
+                      'Abs Workout For Women: 8 Weeks To A Flatter Stomach',
                   imageRef: 'assets/tie-shoe.jpg',
                   heroTag: 'test5',
                   titleProp: 'Fat Burn',

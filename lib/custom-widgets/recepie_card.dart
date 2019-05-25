@@ -16,7 +16,7 @@ class RecepieCard extends StatelessWidget {
           child: Column(
             children: <Widget>[
               FadeInImage(
-                  placeholder: AssetImage('assets/pic.jpg'),
+                  placeholder: AssetImage('assets/placeholder.png'),
                   image: AssetImage('assets/bowl.jpg')),
               // Bottom Text
               Padding(

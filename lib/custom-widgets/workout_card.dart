@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class WorkoutCard extends StatelessWidget {
-  var textProp = 'default';
-  var imageRef = '';
-  var heroTag = '';
-  var titleProp = '';
+  final String textProp;
+  final String imageRef;
+  final String heroTag;
+  final String titleProp;
 
 
   // Image.asset(imageRef, height: 200, fit: BoxFit.cover,)
@@ -33,7 +33,7 @@ class WorkoutCard extends StatelessWidget {
           children: <Widget>[
             Hero(
                 tag: heroTag,
-                child: FadeInImage(placeholder: AssetImage('pic.jpeg'), image: AssetImage(imageRef))
+                child: FadeInImage(placeholder: AssetImage('placeholder.png'), image: AssetImage(imageRef))
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16, left: 16),

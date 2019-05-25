@@ -10,7 +10,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int _currentIndex = 0;
-  String _currentTabTitle = 'Programs';
+  String _currentTabTitle = 'Default';
 
   // Holds the pages for the bottom nav
   final List<Widget> _children = [Programs(), Workout(), Nutrition(), Workout()];

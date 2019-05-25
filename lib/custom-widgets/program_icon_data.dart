@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ProgramIconBar extends StatelessWidget {
-  String goal;
-  String difficulty;
-  String period;
-  String exerciseTime;
+  final String goal;
+  final String difficulty;
+  final String period;
+  final String exerciseTime;
 
   ProgramIconBar(
       {@required this.goal, this.difficulty, this.period, this.exerciseTime});
