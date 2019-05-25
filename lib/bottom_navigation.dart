@@ -26,6 +26,10 @@ class _BottomNavState extends State<BottomNav> {
       });
     } else if (index == 1) {
       setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Workout()),
+        );
         _currentTabTitle = 'Workout';
       });
     } else if (index == 2) {

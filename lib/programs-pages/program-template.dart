@@ -79,24 +79,30 @@ class ProgramTemplate extends StatelessWidget {
                               // Days per week text
                               Padding(
                                 padding:
-                                    const EdgeInsets.only(top: 225.0, left: 8),
-                                child: FlatButton.icon(
-                                    onPressed: () {},
-                                    icon: Icon(
-                                      Icons.timelapse,
-                                      size: 18,
-                                      color:
-                                          Color.fromRGBO(255, 255, 255, 0.75),
-                                    ),
-                                    // Days per week text
-                                    label: Text(
-                                      doc['daysPerWeek'],
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          color: Color.fromRGBO(
-                                              255, 255, 255, 0.75)),
-                                    )),
+                                    const EdgeInsets.only(top: 220.0, left: 8, right: 26),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    FlatButton.icon(
+                                        onPressed: () {},
+                                        icon: Icon(
+                                          Icons.timelapse,
+                                          size: 18,
+                                          color:
+                                              Color.fromRGBO(255, 255, 255, 0.75),
+                                        ),
+                                        // Days per week text
+                                        label: Text(
+                                          doc['daysPerWeek'],
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Color.fromRGBO(
+                                                  255, 255, 255, 0.75)),
+                                        )),
+                                  ],
+                                ),
                               ),
+
                               // Card + Padding
                               Padding(
                                 padding: const EdgeInsets.only(top: 270.0),
@@ -112,11 +118,28 @@ class ProgramTemplate extends StatelessWidget {
                                     child: Column(
                                       children: <Widget>[
                                         // Program Title Container
-                                        ProgramTitleContainer(
-                                          programGoal: doc['goal'],
-                                          programTitle: doc['title'],
-                                          publisher: doc['publisher'],
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: <Widget>[
+                                            ProgramTitleContainer(
+                                              programGoal: doc['goal'],
+                                              programTitle: doc['title'],
+                                              publisher: doc['publisher'],
+                                            ),
+                                            SizedBox(
+                                              width: 115,
+                                              child: RaisedButton(
+                                                color: Theme.of(context).primaryColor,
+                                                elevation: 8,
+                                                child: Text('Start', style: TextStyle(color: Colors.white),),
+                                                onPressed: () {
+                                                  print('Start workout clicked');
+                                                },
+                                              ),
+                                            ),
+                                          ],
                                         ),
+
                                         // Icons for info
                                         Padding(
                                           padding:
@@ -164,21 +187,19 @@ class ProgramTemplate extends StatelessWidget {
                                             data: "${doc['textContent']}",
                                           ),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+                                        Center(
                                           child: SizedBox(
                                             width: 500,
-                                            child: FloatingActionButton(
-                                              shape: ContinuousRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16))),
-                                              child: Text('Start Workout', style: TextStyle(color: Colors.white),),
-                                              backgroundColor: Theme.of(context).buttonColor,
+                                            child: RaisedButton(
+                                              color: Theme.of(context).primaryColor,
+                                              elevation: 8,
+                                              child: Text('Start', style: TextStyle(color: Colors.white),),
                                               onPressed: () {
                                                 print('Start workout clicked');
                                               },
                                             ),
                                           ),
                                         ),
-
                                       ],
                                     ),
                                   ),
@@ -189,7 +210,6 @@ class ProgramTemplate extends StatelessWidget {
                         );
                       }
                     }),
-
               ],
             ),
           ),

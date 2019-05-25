@@ -21,9 +21,7 @@ class _Nutrition extends State<Nutrition> {
                   height: 280,
                   decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(30),
-                          bottomRight: Radius.circular(30))),
+                      borderRadius: BorderRadiusDirectional.vertical(bottom: Radius.circular(25))),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 32.0, top: 42),

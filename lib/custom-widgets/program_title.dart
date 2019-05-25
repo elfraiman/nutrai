@@ -14,8 +14,10 @@ class ProgramTitleContainer extends StatelessWidget {
     return Container(
       child: Container(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text(
                 programGoal,
@@ -26,6 +28,7 @@ class ProgramTitleContainer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(programTitle,
                     style: TextStyle(fontSize: 24)),
@@ -35,6 +38,7 @@ class ProgramTitleContainer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(
                   'Published by ',
